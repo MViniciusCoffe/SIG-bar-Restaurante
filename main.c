@@ -8,6 +8,7 @@ void relatorio_do_dia(void);
 void relatorio_do_mes(void);
 void relatorio_do_ano(void);
 
+#include "telas.c"
 
 int main(void) {
     char op = ' ';
