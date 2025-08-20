@@ -1,11 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "telas.c"
+#include "pedidos.c"
 
-
-void adicionar_itens(void);
-void remover_itens(void);
-void finalizar_pedido(void);
 
 void relatorio_do_dia(void);
 void relatorio_do_mes(void);
@@ -65,31 +62,7 @@ int main(void) {
     return 0;
 }
 
-
-void adicionar_itens(void) {
-    system("clear||cls");
-    printf("\n>>> Adicionar itens.\n");
-    printf("\niten adicionado com sucesso!\n");
-    printf("\nPressione <ENTER> para voltar...\n");
-    getchar();
-}
-
-void remover_itens(void) {
-    system("clear||cls");
-    printf("\n>>> Remover itens (função ainda não implementada).\n");
-    printf("\nIten removido com sucesso!\n");
-    printf("\nPressione <ENTER> para voltar...\n");
-    getchar();
-}
-
-void finalizar_pedido(void) {
-    system("clear||cls");
-    printf("\n>>> Finalizar pedido\n");
-    printf("\nPedido feito com sucesso!\n");
-    printf("\nPressione <ENTER> para voltar...\n");
-    getchar();
-}
-
+// Implementar depois
 void relatorio_vendas_dia(void) {
     system("clear||cls");
     printf("\n>>> RELATÓRIO DE VENDAS DO DIA <<<\n\n");
