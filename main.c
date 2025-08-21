@@ -3,12 +3,9 @@
 #include "telas.c"
 #include "pedidos.c"
 
-
 void relatorio_do_dia(void);
 void relatorio_do_mes(void);
 void relatorio_do_ano(void);
-
-#include "telas.c"
 
 int main(void) {
     char op = ' ';
@@ -86,90 +83,4 @@ void relatorio_reservas(void) {
     printf("- Total de reservas hoje: 12\n");
     printf("- Mesas ocupadas: 8\n");
     printf("- Mesas disponíveis: 4\n");
-}
-
-void tela_reservas(void) {
-    system("clear||cls");
-    printf("\n");
-    printf("╔══════════════════════════════════════════════════════════════════════════╗\n");
-    printf("║                           SISTEMA SIG-BAR                                ║\n");
-    printf("╠══════════════════════════════════════════════════════════════════════════╣\n");
-    printf("║                          >>> RESERVAS <<<                                ║\n");
-    printf("║                                                                          ║\n");
-    printf("║   - Adicionar nova reserva                                               ║\n");
-    printf("║   - Editar reserva existente                                             ║\n");
-    printf("║   - Cancelar reserva                                                     ║\n");
-    printf("║                                                                          ║\n");
-    printf("╚══════════════════════════════════════════════════════════════════════════╝\n");
-    printf("\n\t\t>>> Pressione <ENTER> para continuar...\n");
-    getchar();
-}
-
-void tela_relatorios(void) {
-    system("clear||cls");
-    printf("\n");
-    printf("╔══════════════════════════════════════════════════════════════════════════╗\n");
-    printf("║                           SISTEMA SIG-BAR                                ║\n");
-    printf("╠══════════════════════════════════════════════════════════════════════════╣\n");
-    printf("║                         >>> RELATÓRIOS <<<                               ║\n");
-    printf("║                                                                          ║\n");
-    printf("║   - Relatório de vendas diárias                                          ║\n");
-    printf("║   - Relatório de vendas mensais                                          ║\n");
-    printf("║   - Relatório de vendas anuais                                           ║\n");
-    printf("║                                                                          ║\n");
-    printf("╚══════════════════════════════════════════════════════════════════════════╝\n");
-    printf("\n\t\t>>> Pressione <ENTER> para continuar...\n");
-    getchar();
-}
-
-void tela_sobre(void) {
-    system("clear||cls");
-    printf("\n");
-    printf("╔══════════════════════════════════════════════════════════════════════════╗\n");
-    printf("║                           SISTEMA SIG-BAR                                ║\n");
-    printf("╠══════════════════════════════════════════════════════════════════════════╣\n");
-    printf("║                              >>> SOBRE <<<                               ║\n");
-    printf("║ Sistema de gerenciamento para bares e restaurantes, desenvolvido por     ║\n");
-    printf("║ Marcus Vinicius de Souza Azevedo e Luís Felipe Linhares Pereira, alunos  ║\n");
-    printf("║ do curso de Sistemas de Informação da UFRN - CERES Caicó.                ║\n");
-    printf("║                                                                          ║\n");
-    printf("║ O SIG-BAR busca otimizar o controle de pedidos, mesas, produtos e caixa  ║\n");
-    printf("║ de forma prática e eficiente, auxiliando a gestão do estabelecimento.    ║\n");
-    printf("║                                                                          ║\n");
-    printf("║ Projeto acadêmico com foco em usabilidade, organização e desempenho.     ║\n");
-    printf("╚══════════════════════════════════════════════════════════════════════════╝\n");
-    printf("\n\t\t>>> Pressione <ENTER> para continuar...\n");
-    getchar();
-}
-
-void tela_equipe(void) {
-    system("clear||cls");
-    printf("\n");
-    printf("╔══════════════════════════════════════════════════════════════════════════╗\n");
-    printf("║                           SISTEMA SIG-BAR                                ║\n");
-    printf("╠══════════════════════════════════════════════════════════════════════════╣\n");
-    printf("║                         >>> EQUIPE TÉCNICA <<<                           ║\n");
-    printf("║ Marcus Vinicius de Souza Azevedo                                         ║\n");
-    printf("║ Email: nfobasicifrn2017marcusv@gmail.com                                 ║\n");
-    printf("║                                                                          ║\n");
-    printf("║ Luís Felipe Linhares Pereira                                             ║\n");
-    printf("║ Email: uis.felipe.linhares.701@ufrn.edu.br                               ║\n");
-    printf("╚══════════════════════════════════════════════════════════════════════════╝\n");
-    printf("\n\t\t>>> Pressione <ENTER> para continuar...\n");
-    getchar();
-}
-
-void tela_finalizacao(void) {
-    system("clear||cls");
-    printf("\n");
-    printf("╔══════════════════════════════════════════════════════════════════════════╗\n");
-    printf("║                           SISTEMA SIG-BAR                                ║\n");
-    printf("╠══════════════════════════════════════════════════════════════════════════╣\n");
-    printf("║                          >>> ENCERRAMENTO <<<                            ║\n");
-    printf("║                                                                          ║\n");
-    printf("║             Obrigado por utilizar o SIG-BAR. Até a próxima!              ║\n");
-    printf("║                                                                          ║\n");
-    printf("╚══════════════════════════════════════════════════════════════════════════╝\n");
-    printf("\n\t\t>>> Pressione <ENTER> para sair...\n");
-    getchar();
 }
