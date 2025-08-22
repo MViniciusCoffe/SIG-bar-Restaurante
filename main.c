@@ -17,7 +17,7 @@ int main(void) {
         tela_gestao();
 
         printf("\nDigite a opção desejada: "); 
-        op = getchar(); 
+        op = getchar();
         getchar();  // Limpa '\n'
 
         if (op == '1') {
