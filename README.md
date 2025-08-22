@@ -15,3 +15,8 @@ Contém os módulos principais do sistema, como:
     - Informações sobre a equipe de desenvolvimento, incluindo nomes e funções.
 4. Finalização:
     - Tela de finalização do sistema, com opções para sair ou reiniciar.
+
+## To do
+1. Mudança na lógica de realização de pedidos
+2. Modularizar mais
+3. Simplificar interface
