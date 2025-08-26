@@ -20,3 +20,4 @@ Contém os módulos principais do sistema, como:
 1. Mudança na lógica de realização de pedidos
 2. Modularizar mais
 3. Simplificar interface
+4. Adicionar `Como Rodar`
