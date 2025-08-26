@@ -1,4 +1,5 @@
 #include "telas.h"
+#include "pause.h"
 
 void tela_gestao(void) {
     printf("\n");
@@ -87,9 +88,9 @@ void tela_cardapio(void) {
             printf("╔══════════════════════════════════════════════════════════════════════╗\n");
             printf("║                            >>> BEBIDAS <<<                           ║\n");
             printf("╠══════════════════════════════════════════════════════════════════════╣\n");
-            printf("║  1. Refrigerante Lata...................... R$ 5,00                 ║\n");
-            printf("║  2. Água Mineral........................... R$ 3,00                 ║\n");
-            printf("║  3. Suco Natural........................... R$ 7,00                 ║\n");
+            printf("║  1. Refrigerante Lata...................... R$ 5,00                  ║\n");
+            printf("║  2. Água Mineral........................... R$ 3,00                  ║\n");
+            printf("║  3. Suco Natural........................... R$ 7,00                  ║\n");
             printf("╚══════════════════════════════════════════════════════════════════════╝\n");
             printf("\nPressione <ENTER> para voltar...\n");
             getchar();
@@ -100,9 +101,9 @@ void tela_cardapio(void) {
             printf("╔══════════════════════════════════════════════════════════════════════╗\n");
             printf("║                           >>> SOBREMESAS <<<                         ║\n");
             printf("╠══════════════════════════════════════════════════════════════════════╣\n");
-            printf("║  1. Pudim de Leite......................... R$ 10,00                ║\n");
-            printf("║  2. Mousse de Maracujá..................... R$ 9,00                 ║\n");
-            printf("║  3. Brownie com Sorvete.................... R$ 12,00                ║\n");
+            printf("║  1. Pudim de Leite......................... R$ 10,00                 ║\n");
+            printf("║  2. Mousse de Maracujá..................... R$ 9,00                  ║\n");
+            printf("║  3. Brownie com Sorvete.................... R$ 12,00                 ║\n");
             printf("╚══════════════════════════════════════════════════════════════════════╝\n");
             printf("\nPressione <ENTER> para voltar...\n");
             getchar();
@@ -185,7 +186,6 @@ void tela_relatorios(void) {
         printf("║     3- Relatorio anual                                                ║\n");
         printf("║     0- Voltar ao menu principal                                       ║\n");
         printf("║                                                                       ║\n");
-        printf("║                                                                       ║\n");
         printf("╚═══════════════════════════════════════════════════════════════════════╝\n");
         op = getchar();
         getchar();
@@ -242,9 +242,9 @@ void tela_sobre(void) {
     printf("║    da UFRN - Campus CERES Caicó. Projeto desenvolvido com fins        ║\n");
     printf("║               educacionais e acadêmicos.                              ║\n");
     printf("║                                                                       ║\n");
-    printf("║                 Pressione <ENTER> para voltar...                      ║\n");
+    printf("║              Pressione qualquer tecla para voltar...                  ║\n");
+    printf("║                                                                       ║\n");
     printf("╚═══════════════════════════════════════════════════════════════════════╝\n");
-    getchar();
 }
 
 void tela_equipe(void) {
@@ -266,9 +266,9 @@ void tela_equipe(void) {
     printf("║  -LUÍS FELIPE LINHARES PEREIRA                                        ║\n");
     printf("║   Email:luis.felipe.linhares.701@ufrn.edu.br                          ║\n");
     printf("║                                                                       ║\n");
-    printf("║                 Pressione <ENTER> para voltar...                      ║\n");
+    printf("║             Pressione qualquer tecla para voltar...                   ║\n");
+    printf("║                                                                       ║\n");
     printf("╚═══════════════════════════════════════════════════════════════════════╝\n");
-    getchar();
 }
 
 void tela_finalizacao(void) {
@@ -287,6 +287,4 @@ void tela_finalizacao(void) {
     printf("║         Obrigado por utilizar o SIG-BAR. Até a próxima!               ║\n");
     printf("║                                                                       ║\n");
     printf("╚═══════════════════════════════════════════════════════════════════════╝\n");
-    printf("\n\t\t>>> Pressione <ENTER> para sair...\n");
-    getchar();
 }

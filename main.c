@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "telas.c"
 #include "pedidos.c"
+#include "pause.c"
 
 
 void relatorio_do_dia(void);
@@ -22,6 +23,7 @@ int main(void) {
 
         if (op == '1') {
             char op_menu = ' ';
+            
             while (op_menu != '0') {
                 system("clear||cls");
                 tela_menu_principal();
@@ -30,8 +32,35 @@ int main(void) {
                 op_menu = getchar();
                 getchar();
 
-                if (op_menu == '1') {
-                    tela_pedidos();
+                if (op_menu == '1') { //////////////////// PEDIDOS
+                    char op_pedidos = ' ';
+
+                    while (op_pedidos != '0') {
+                        system("clear||cls");
+                        tela_pedidos();
+
+                        printf("\nDigite a opção desejada: ");
+                        op_pedidos = getchar();
+                        getchar();
+
+                        if (op_pedidos == '1') {
+                            adicionar_itens();
+                            press_qualquer_tecla();
+                        } else if (op_pedidos == '2') {
+                            remover_itens();
+                            press_qualquer_tecla();
+                        } else if (op_pedidos == '3') {
+                            finalizar_pedido();
+                            press_qualquer_tecla();
+                        } else if (op_pedidos == '0') {
+                            printf("\n>>> Retornando ao menu anterior...\n");
+                            printf("\nPressione qualquer tecla para continuar...\n");
+                            press_qualquer_tecla();
+                        } else {
+                            printf("\n>>> Opção inválida! Tente novamente.\n");
+                            press_qualquer_tecla();
+                        }
+                    }
                 } else if (op_menu == '2') {
                     tela_cardapio();
                 } else if (op_menu == '3') {
@@ -42,20 +71,22 @@ int main(void) {
                     // Voltar para tela de gestão
                 } else {
                     printf("\n>>> Opção inválida! Tente novamente.\n");
-                    printf("\nPressione <ENTER> para continuar...\n");
-                    getchar();
+                    printf("\nPressione qualquer tecla para continuar...\n");
+                    press_qualquer_tecla();
                 }
             }
         } else if (op == '2') {
             tela_sobre();
+            press_qualquer_tecla();
         } else if (op == '3') {
             tela_equipe();
+            press_qualquer_tecla();
         } else if (op == '0') {
             tela_finalizacao();
         } else {
             printf("\n>>> Opção inválida! Tente novamente.\n");
-            printf("\nPressione <ENTER> para continuar...\n");
-            getchar();
+            printf("\nPressione qualquer tecla para continuar...\n");
+            press_qualquer_tecla();
         }
     }
 
