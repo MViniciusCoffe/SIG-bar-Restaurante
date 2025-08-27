@@ -1,6 +1,7 @@
 #include "pedidos.h"
 
-void tela_pedidos(void) {
+void tela_pedidos(void)
+{
     printf("\n");
     printf("╔═══════════════════════════════════════════════════════════════════════╗\n");
     printf("║    ░██████╗██╗░██████╗░  ██████╗░░█████╗░██████╗░                     ║\n");
@@ -20,7 +21,8 @@ void tela_pedidos(void) {
     printf("╚═══════════════════════════════════════════════════════════════════════╝\n");
 }
 
-void adicionar_itens(void) {
+void adicionar_itens(void)
+{
     char num_mesa[10];
     char num_prato[10];
 
@@ -36,7 +38,8 @@ void adicionar_itens(void) {
     printf("\nitem adicionado com sucesso!\n");
 }
 
-void remover_itens(void) {
+void remover_itens(void)
+{
     char num_mesa[10];
     char num_prato[10];
     system("clear||cls");
@@ -51,17 +54,21 @@ void remover_itens(void) {
     printf("\nItem removido com sucesso!\n");
 }
 
-void finalizar_pedido(void) {
+void finalizar_pedido(void)
+{
     char confirmacao[2];
     system("clear||cls");
     printf("\n>>> Finalizar pedido\n");
-    
+
     printf("Deseja finalizar o pedido? S/N: ");
     scanf("%s", confirmacao);
 
-    if (confirmacao[0] == 'S' || confirmacao[0] == 's') {
+    if (confirmacao[0] == 'S' || confirmacao[0] == 's')
+    {
         printf("\nPedido finalizado com sucesso!\n");
-    } else {
+    }
+    else
+    {
         printf("\nPedido não finalizado!");
     }
 }

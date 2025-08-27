@@ -4,7 +4,8 @@
 #include "pedidos.c"
 #include "pause.c"
 
-int main(void) {
+int main(void)
+{
     remover_itens();
 
     press_qualquer_tecla();
