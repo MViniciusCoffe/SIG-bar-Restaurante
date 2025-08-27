@@ -21,7 +21,7 @@ int main(void)
         op = getchar();
         getchar(); // Limpa '\n'
 
-        if (op == '1')
+        if (op == '1') //////////////////// TELA PRINCIPAL
         {
             char op_menu = ' ';
 
@@ -34,8 +34,8 @@ int main(void)
                 op_menu = getchar();
                 getchar();
 
-                if (op_menu == '1')
-                { //////////////////// PEDIDOS
+                if (op_menu == '1') //////////////////// PEDIDOS
+                {
                     char op_pedidos = ' ';
 
                     while (op_pedidos != '0')
@@ -47,22 +47,22 @@ int main(void)
                         op_pedidos = getchar();
                         getchar();
 
-                        if (op_pedidos == '1')
+                        if (op_pedidos == '1') //////////////////// ADICIONAR ITENS
                         {
                             adicionar_itens();
                             press_qualquer_tecla();
                         }
-                        else if (op_pedidos == '2')
+                        else if (op_pedidos == '2') //////////////////// REMOVER ITENS
                         {
                             remover_itens();
                             press_qualquer_tecla();
                         }
-                        else if (op_pedidos == '3')
+                        else if (op_pedidos == '3') //////////////////// FINALIZAR PEDIDOS
                         {
                             finalizar_pedido();
                             press_qualquer_tecla();
                         }
-                        else if (op_pedidos == '0')
+                        else if (op_pedidos == '0') //////////////////// VOLTAR PARA TELA PEDIDOS
                         {
                             printf("\n>>> Retornando ao menu anterior...\n");
                             printf("\nPressione qualquer tecla para continuar...\n");
@@ -75,19 +75,19 @@ int main(void)
                         }
                     }
                 }
-                else if (op_menu == '2')
+                else if (op_menu == '2') //////////////////// CARDÁPIO
                 {
                     tela_cardapio();
                 }
-                else if (op_menu == '3')
+                else if (op_menu == '3') //////////////////// RESERVAS
                 {
                     tela_reservas();
                 }
-                else if (op_menu == '4')
+                else if (op_menu == '4') //////////////////// RELATÓRIOS
                 {
                     tela_relatorios();
                 }
-                else if (op_menu == '0')
+                else if (op_menu == '0') //////////////////// VOLTAR
                 {
                     // Voltar para tela de gestão
                 }
@@ -99,17 +99,17 @@ int main(void)
                 }
             }
         }
-        else if (op == '2')
+        else if (op == '2') //////////////////// TELA SOBRE
         {
             tela_sobre();
             press_qualquer_tecla();
         }
-        else if (op == '3')
+        else if (op == '3') //////////////////// TELA EQUIPE
         {
             tela_equipe();
             press_qualquer_tecla();
         }
-        else if (op == '0')
+        else if (op == '0') //////////////////// TELA FINALIZAÇÃO
         {
             tela_finalizacao();
         }
