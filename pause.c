@@ -1,6 +1,7 @@
 #include "pause.h"
 
 // Bloco condicional de compilação (Só compila no windows)
+// CRÉDITOS: ChatGPT me ajudou a fazer e entender os códigos
 #ifdef _WIN32
 // Biblioteca de rotinas de console
 #include <conio.h>
@@ -17,6 +18,9 @@ void press_qualquer_tecla(void)
 #include <unistd.h>
 void press_qualquer_tecla(void)
 {
+    // Limpa o buffer do scanf
+    limpar_buffer_teclas();
+    
     // oldt guardará a configuração atual do terminal, para restaurar depois;
     // newt será a configuração temporária que desativa o “precisar apertar ENTER”.
     struct termios oldt, newt;
@@ -41,3 +45,24 @@ void press_qualquer_tecla(void)
 }
 
 #endif
+
+// Créditos: ChatGPT me ajudou a fazer e entender o código
+void limpar_buffer_teclas(void) {
+    // int c;
+    // while ((c = getchar()) != '\n' && c != EOF);
+    // Alterei esse código para ser mais legível
+    int ch;
+
+    while (1) {
+        ch = getchar();
+
+        // Verifica se tem <ENTER> ou EOF (End of file) no buffer, se tiver, isso indica que o buffer já foi limpo
+        if (ch == '\n') {
+            break;
+        }
+
+        if (ch == EOF) {
+            break;
+        }
+    }
+}
