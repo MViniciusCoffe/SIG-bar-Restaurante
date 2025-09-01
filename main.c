@@ -3,6 +3,7 @@
 #include "telas.c"
 #include "pedidos.c"
 #include "pause.c"
+#include "reservas.c"
 
 void relatorio_do_dia(void);
 void relatorio_do_mes(void);
@@ -78,14 +79,56 @@ int main(void)
                 else if (op_menu == '2') //////////////////// CARDÁPIO
                 {
                     tela_cardapio();
+                    press_qualquer_tecla();
                 }
                 else if (op_menu == '3') //////////////////// RESERVAS
                 {
-                    tela_reservas();
+                    char op_reserva = ' ';
+
+                    while (op_reserva != '0')
+                    {
+                        system("clear||cls");
+                        tela_reservas();
+
+                        printf("\nDigite a opção desejada: ");
+                        op_reserva = getchar();
+                        getchar(); // Limpa o '\n' do buffer
+
+                        if (op_reserva == '1')
+                        {
+                            system("clear||cls");
+                            criar_reserva();
+                            press_qualquer_tecla();
+                        }
+                        else if (op_reserva == '3')
+                        {
+                            system("clear||cls");
+                            listar_reserva();
+                            press_qualquer_tecla();
+                        }
+                        else if (op_reserva == '2') 
+                        {
+                            system("clear||cls");
+                            finalizar_reserva();
+                            press_qualquer_tecla();
+                        } 
+                        else if (op_reserva == '0')
+                        {
+                            printf("\nSaindo do sistema...\n");
+                            press_qualquer_tecla();
+                        }
+                        else
+                        {
+                            printf("\nOpção inválida! Tente novamente.\n");
+                            printf("Pressione Enter para continuar...");
+                            getchar();
+                        }
+                    }
                 }
                 else if (op_menu == '4') //////////////////// RELATÓRIOS
                 {
                     tela_relatorios();
+                    press_qualquer_tecla();
                 }
                 else if (op_menu == '0') //////////////////// VOLTAR
                 {
@@ -97,7 +140,7 @@ int main(void)
                     printf("\nPressione qualquer tecla para continuar...\n");
                     press_qualquer_tecla();
                 }
-            }
+            } // Fim do while op_menu
         }
         else if (op == '2') //////////////////// TELA SOBRE
         {
