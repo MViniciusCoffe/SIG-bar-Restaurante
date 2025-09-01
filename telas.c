@@ -1,6 +1,8 @@
 #include "telas.h"
+#include "pause.h"
 
-void tela_gestao(void) {
+void tela_gestao(void)
+{
     printf("\n");
     printf("╔═══════════════════════════════════════════════════════════════════════╗\n");
     printf("║    ░██████╗██╗░██████╗░  ██████╗░░█████╗░██████╗░                     ║\n");
@@ -20,7 +22,8 @@ void tela_gestao(void) {
     printf("╚═══════════════════════════════════════════════════════════════════════╝\n");
 }
 
-void tela_menu_principal(void) {
+void tela_menu_principal(void)
+{
     printf("\n");
     printf("╔════════════════════════════════════════════════════════════════════════╗\n");
     printf("║    ░██████╗██╗░██████╗░  ██████╗░░█████╗░██████╗░                      ║\n");
@@ -41,11 +44,12 @@ void tela_menu_principal(void) {
     printf("╚════════════════════════════════════════════════════════════════════════╝\n");
 }
 
-
-void tela_cardapio(void) {
+void tela_cardapio(void)
+{
     char op = ' ';
 
-    while (op != '0') { 
+    while (op != '0')
+    {
         system("clear||cls");
         printf("\n");
         printf("╔══════════════════════════════════════════════════════════════════════════╗\n");
@@ -68,7 +72,8 @@ void tela_cardapio(void) {
         op = getchar();
         getchar(); // limpa o enter
 
-        if (op == '1') {
+        if (op == '1')
+        {
             system("clear||cls");
             printf("\n");
             printf("╔══════════════════════════════════════════════════════════════════════╗\n");
@@ -80,8 +85,9 @@ void tela_cardapio(void) {
             printf("╚══════════════════════════════════════════════════════════════════════╝\n");
             printf("\nPressione <ENTER> para voltar...\n");
             getchar();
-
-        } else if (op == '2') {
+        }
+        else if (op == '2')
+        {
             system("clear||cls");
             printf("\n");
             printf("╔══════════════════════════════════════════════════════════════════════╗\n");
@@ -93,8 +99,9 @@ void tela_cardapio(void) {
             printf("╚══════════════════════════════════════════════════════════════════════╝\n");
             printf("\nPressione <ENTER> para voltar...\n");
             getchar();
-
-        } else if (op == '3') {
+        }
+        else if (op == '3')
+        {
             system("clear||cls");
             printf("\n");
             printf("╔══════════════════════════════════════════════════════════════════════╗\n");
@@ -106,10 +113,13 @@ void tela_cardapio(void) {
             printf("╚══════════════════════════════════════════════════════════════════════╝\n");
             printf("\nPressione <ENTER> para voltar...\n");
             getchar();
-
-        } else if (op == '0') {
+        }
+        else if (op == '0')
+        {
             // Volta a gestao
-        } else {
+        }
+        else
+        {
             printf("\n>>> Opção inválida! Tente novamente.\n");
             printf("\nPressione <ENTER> para continuar...\n");
             getchar();
@@ -117,47 +127,13 @@ void tela_cardapio(void) {
     }
 }
 
-void tela_reservas(void) {
+
+void tela_relatorios(void)
+{
     char op = ' ';
 
-    while (op != '0') {
-        system("clear||cls");
-        printf("\n");
-        printf("╔═════════════════════════════════════════════════════════════════════╗\n");
-        printf("║    ░██████╗██╗░██████╗░  ██████╗░░█████╗░██████╗░                   ║\n");
-        printf("║    ██╔════╝██║██╔════╝░  ██╔══██╗██╔══██╗██╔══██╗                   ║\n");
-        printf("║    ╚█████╗░██║██║░░██╗░  ██████╦╝███████║██████╔╝                   ║\n");
-        printf("║    ░╚═══██╗██║██║░░╚██╗  ██╔══██╗██╔══██║██╔══██╗                   ║\n");
-        printf("║    ██████╔╝██║╚██████╔╝  ██████╦╝██║░░██║██║░░██║                   ║\n");
-        printf("║    ╚═════╝░╚═╝░╚═════╝░  ╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝                   ║\n");
-        printf("╠═════════════════════════════════════════════════════════════════════╣\n");
-        printf("║                        >>> RESERVAS <<<                             ║\n");
-        printf("║                                                                     ║\n");
-        printf("║   1. Criar reserva                                                  ║\n");
-        printf("║   2. Cancelar reserva                                               ║\n");
-        printf("║   3. Listar reservas                                                ║\n");
-        printf("║   0. Voltar ao menu anterior                                        ║\n");
-        printf("║                                                                     ║\n");
-        printf("╚═════════════════════════════════════════════════════════════════════╝\n");
-
-        if (op == '1') {
-            printf("\n>>> Adicionar itens (função ainda não implementada).\n");
-        } else if (op == '2') {
-            printf("\n>>> Remover itens (função ainda não implementada).\n");
-        } else if (op == '3') {
-            printf("\n>>> Finalizar pedido (função ainda não implementada).\n");
-        } else if (op == '0') {
-            printf("\n>>> Retornando ao menu anterior...\n");
-        } else {
-            printf("\n>>> Opção inválida! Tente novamente.\n");
-        }
-    }
-}
-
-void tela_relatorios(void) {
-    char op = ' ';
-
-    while (op != '0'){
+    while (op != '0')
+    {
         system("clear||cls");
         printf("\n");
         printf("╔═══════════════════════════════════════════════════════════════════════╗\n");
@@ -175,12 +151,12 @@ void tela_relatorios(void) {
         printf("║     3- Relatorio anual                                                ║\n");
         printf("║     0- Voltar ao menu principal                                       ║\n");
         printf("║                                                                       ║\n");
-        printf("║                                                                       ║\n");
         printf("╚═══════════════════════════════════════════════════════════════════════╝\n");
         op = getchar();
         getchar();
 
-        if (op == '1') {
+        if (op == '1')
+        {
             system("clear||cls");
             printf("\n>>> RELATÓRIO DE VENDAS DO DIA <<<\n\n");
             printf("- Total de vendas: R$ 1.250,00\n");
@@ -188,7 +164,9 @@ void tela_relatorios(void) {
             printf("- Média por pedido: R$ 27,78\n");
             printf("\nPressione <ENTER> para continuar...\n");
             getchar();
-        } else if (op == '2') {
+        }
+        else if (op == '2')
+        {
             system("clear||cls");
             printf("\n>>> RELATÓRIO DE ITENS MAIS VENDIDOS <<<\n\n");
             printf("1. Prato Executivo .......... 15 unidades\n");
@@ -196,7 +174,9 @@ void tela_relatorios(void) {
             printf("3. Brownie com Sorvete ...... 9 unidades\n");
             printf("\nPressione <ENTER> para continuar...\n");
             getchar();
-        } else if (op == '3') {
+        }
+        else if (op == '3')
+        {
             system("clear||cls");
             printf("\n>>> RELATÓRIO DE RESERVAS <<<\n\n");
             printf("- Total de reservas hoje: 12\n");
@@ -204,9 +184,13 @@ void tela_relatorios(void) {
             printf("- Mesas disponíveis: 4\n");
             printf("\nPressione <ENTER> para continuar...\n");
             getchar();
-        } else if (op == '0') {
+        }
+        else if (op == '0')
+        {
             printf("\n>>> Retornando ao menu anterior...\n");
-        } else {
+        }
+        else
+        {
             printf("\n>>> Opção inválida! Tente novamente.\n");
             printf("\nPressione <ENTER> para continuar...\n");
             getchar();
@@ -214,7 +198,8 @@ void tela_relatorios(void) {
     }
 }
 
-void tela_sobre(void) {
+void tela_sobre(void)
+{
     system("clear||cls");
     printf("\n");
     printf("╔═══════════════════════════════════════════════════════════════════════╗\n");
@@ -232,12 +217,13 @@ void tela_sobre(void) {
     printf("║    da UFRN - Campus CERES Caicó. Projeto desenvolvido com fins        ║\n");
     printf("║               educacionais e acadêmicos.                              ║\n");
     printf("║                                                                       ║\n");
-    printf("║                 Pressione <ENTER> para voltar...                      ║\n");
+    printf("║              Pressione qualquer tecla para voltar...                  ║\n");
+    printf("║                                                                       ║\n");
     printf("╚═══════════════════════════════════════════════════════════════════════╝\n");
-    getchar();
 }
 
-void tela_equipe(void) {
+void tela_equipe(void)
+{
     system("clear||cls");
     printf("\n");
     printf("╔═══════════════════════════════════════════════════════════════════════╗\n");
@@ -256,12 +242,13 @@ void tela_equipe(void) {
     printf("║  -LUÍS FELIPE LINHARES PEREIRA                                        ║\n");
     printf("║   Email:luis.felipe.linhares.701@ufrn.edu.br                          ║\n");
     printf("║                                                                       ║\n");
-    printf("║                 Pressione <ENTER> para voltar...                      ║\n");
+    printf("║             Pressione qualquer tecla para voltar...                   ║\n");
+    printf("║                                                                       ║\n");
     printf("╚═══════════════════════════════════════════════════════════════════════╝\n");
-    getchar();
 }
 
-void tela_finalizacao(void) {
+void tela_finalizacao(void)
+{
     system("clear||cls");
     printf("\n");
     printf("╔═══════════════════════════════════════════════════════════════════════╗\n");
@@ -277,6 +264,4 @@ void tela_finalizacao(void) {
     printf("║         Obrigado por utilizar o SIG-BAR. Até a próxima!               ║\n");
     printf("║                                                                       ║\n");
     printf("╚═══════════════════════════════════════════════════════════════════════╝\n");
-    printf("\n\t\t>>> Pressione <ENTER> para sair...\n");
-    getchar();
 }
