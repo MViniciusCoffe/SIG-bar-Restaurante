@@ -37,44 +37,7 @@ int main(void)
 
                 if (op_menu == '1') //////////////////// PEDIDOS
                 {
-                    char op_pedidos = ' ';
-
-                    while (op_pedidos != '0')
-                    {
-                        system("clear||cls");
-                        tela_pedidos();
-
-                        printf("\nDigite a opção desejada: ");
-                        op_pedidos = getchar();
-                        getchar();
-
-                        if (op_pedidos == '1') //////////////////// ADICIONAR ITENS
-                        {
-                            adicionar_itens();
-                            press_qualquer_tecla();
-                        }
-                        else if (op_pedidos == '2') //////////////////// REMOVER ITENS
-                        {
-                            remover_itens();
-                            press_qualquer_tecla();
-                        }
-                        else if (op_pedidos == '3') //////////////////// FINALIZAR PEDIDOS
-                        {
-                            finalizar_pedido();
-                            press_qualquer_tecla();
-                        }
-                        else if (op_pedidos == '0') //////////////////// VOLTAR PARA TELA PEDIDOS
-                        {
-                            printf("\n>>> Retornando ao menu anterior...\n");
-                            printf("\nPressione qualquer tecla para continuar...\n");
-                            press_qualquer_tecla();
-                        }
-                        else
-                        {
-                            printf("\n>>> Opção inválida! Tente novamente.\n");
-                            press_qualquer_tecla();
-                        }
-                    }
+                    navegacao_pedidos();
                 }
                 else if (op_menu == '2') //////////////////// CARDÁPIO
                 {
@@ -99,11 +62,11 @@ int main(void)
                             criar_reserva();
                             press_qualquer_tecla();
                         }
-                        else if (op_reserva == '2') //////////////////// FINALIZAR RESERVA 
+                        else if (op_reserva == '2') //////////////////// FINALIZAR RESERVA
                         {
                             finalizar_reserva();
                             press_qualquer_tecla();
-                        } 
+                        }
                         else if (op_reserva == '3') //////////////////// LISTAR RESERVAS
                         {
                             listar_reserva();
@@ -137,7 +100,7 @@ int main(void)
                     printf("\nPressione qualquer tecla para continuar...\n");
                     press_qualquer_tecla();
                 }
-            } // Fim do while op_menu
+            }
         }
         else if (op == '2') //////////////////// TELA SOBRE
         {

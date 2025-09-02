@@ -72,3 +72,45 @@ void finalizar_pedido(void)
         printf("\nPedido não finalizado!");
     }
 }
+
+void navegacao_pedidos(void)
+{
+    char op_pedidos = ' ';
+
+    while (op_pedidos != '0')
+    {
+        system("clear||cls");
+        tela_pedidos();
+
+        printf("\nDigite a opção desejada: ");
+        op_pedidos = getchar();
+        getchar();
+
+        if (op_pedidos == '1') //////////////////// ADICIONAR ITENS
+        {
+            adicionar_itens();
+            press_qualquer_tecla();
+        }
+        else if (op_pedidos == '2') //////////////////// REMOVER ITENS
+        {
+            remover_itens();
+            press_qualquer_tecla();
+        }
+        else if (op_pedidos == '3') //////////////////// FINALIZAR PEDIDOS
+        {
+            finalizar_pedido();
+            press_qualquer_tecla();
+        }
+        else if (op_pedidos == '0') //////////////////// VOLTAR PARA TELA PEDIDOS
+        {
+            printf("\n>>> Retornando ao menu anterior...\n");
+            printf("\nPressione qualquer tecla para continuar...\n");
+            press_qualquer_tecla();
+        }
+        else
+        {
+            printf("\n>>> Opção inválida! Tente novamente.\n");
+            press_qualquer_tecla();
+        }
+    }
+}
