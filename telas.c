@@ -25,23 +25,23 @@ void tela_gestao(void)
 void tela_menu_principal(void)
 {
     printf("\n");
-    printf("╔═══════════════════════════════════════════════════════════════════════╗\n");
-    printf("║    ░██████╗██╗░██████╗░  ██████╗░░█████╗░██████╗░                     ║\n");
-    printf("║    ██╔════╝██║██╔════╝░  ██╔══██╗██╔══██╗██╔══██╗                     ║\n");
-    printf("║    ╚█████╗░██║██║░░██╗░  ██████╦╝███████║██████╔╝                     ║\n");
-    printf("║    ░╚═══██╗██║██║░░╚██╗  ██╔══██╗██╔══██║██╔══██╗                     ║\n");
-    printf("║    ██████╔╝██║╚██████╔╝  ██████╦╝██║░░██║██║░░██║                     ║\n");
-    printf("║    ╚═════╝░╚═╝░╚═════╝░  ╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝                     ║\n");
-    printf("╠═══════════════════════════════════════════════════════════════════════╣\n");
-    printf("║                         >>> MENU PRINCIPAL <<<                        ║\n");
-    printf("║                                                                       ║\n");
-    printf("║   1. Pedidos      - Criar e gerenciar pedidos                         ║\n");
-    printf("║   2. Cardápio     - Visualizar cardápio                               ║\n");
-    printf("║   3. Reservas     - Gerenciar reservas                                ║\n");
-    printf("║   4. Relatórios   - Gerar relatórios de vendas                        ║\n");
-    printf("║   0. Voltar para tela de gestão                                       ║\n");
-    printf("║                                                                       ║\n");
-    printf("╚═══════════════════════════════════════════════════════════════════════╝\n");
+    printf("╔════════════════════════════════════════════════════════════════════════╗\n");
+    printf("║    ░██████╗██╗░██████╗░  ██████╗░░█████╗░██████╗░                      ║\n");
+    printf("║    ██╔════╝██║██╔════╝░  ██╔══██╗██╔══██╗██╔══██╗                      ║\n");
+    printf("║    ╚█████╗░██║██║░░██╗░  ██████╦╝███████║██████╔╝                      ║\n");
+    printf("║    ░╚═══██╗██║██║░░╚██╗  ██╔══██╗██╔══██║██╔══██╗                      ║\n");
+    printf("║    ██████╔╝██║╚██████╔╝  ██████╦╝██║░░██║██║░░██║                      ║\n");
+    printf("║    ╚═════╝░╚═╝░╚═════╝░  ╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝                      ║\n");
+    printf("╠════════════════════════════════════════════════════════════════════════╣\n");
+    printf("║                         >>> MENU PRINCIPAL <<<                         ║\n");
+    printf("║                                                                        ║\n");
+    printf("║   1. Pedidos      - Criar e gerenciar pedidos                          ║\n");
+    printf("║   2. Cardápio     - Visualizar cardápio                                ║\n");
+    printf("║   3. Reservas     - Gerenciar reservas                                 ║\n");
+    printf("║   4. Relatórios   - Gerar relatórios de vendas                         ║\n");
+    printf("║   0. Voltar para tela de gestão                                        ║\n");
+    printf("║                                                                        ║\n");
+    printf("╚════════════════════════════════════════════════════════════════════════╝\n");
 }
 
 void tela_cardapio(void)
