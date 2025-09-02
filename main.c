@@ -92,27 +92,24 @@ int main(void)
 
                         printf("\nDigite a opção desejada: ");
                         op_reserva = getchar();
-                        getchar(); // Limpa o '\n' do buffer
+                        getchar();
 
-                        if (op_reserva == '1')
+                        if (op_reserva == '1') //////////////////// CRIAR RESERVA
                         {
-                            system("clear||cls");
                             criar_reserva();
                             press_qualquer_tecla();
                         }
-                        else if (op_reserva == '3')
+                        else if (op_reserva == '2') //////////////////// FINALIZAR RESERVA 
                         {
-                            system("clear||cls");
-                            listar_reserva();
-                            press_qualquer_tecla();
-                        }
-                        else if (op_reserva == '2') 
-                        {
-                            system("clear||cls");
                             finalizar_reserva();
                             press_qualquer_tecla();
                         } 
-                        else if (op_reserva == '0')
+                        else if (op_reserva == '3') //////////////////// LISTAR RESERVAS
+                        {
+                            listar_reserva();
+                            press_qualquer_tecla();
+                        }
+                        else if (op_reserva == '0') //////////////////// VOLTAR
                         {
                             printf("\nSaindo do sistema...\n");
                             press_qualquer_tecla();

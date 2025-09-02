@@ -18,7 +18,7 @@ void tela_reservas(void)
     printf("║                        >>> RESERVAS <<<                             ║\n");
     printf("║                                                                     ║\n");
     printf("║   1. Criar reserva                                                  ║\n");
-    printf("║   2. Cancelar reserva                                               ║\n");
+    printf("║   2. Finalizar reserva                                              ║\n");
     printf("║   3. Listar reservas                                                ║\n");
     printf("║   0. Voltar ao menu anterior                                        ║\n");
     printf("║                                                                     ║\n");
