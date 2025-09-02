@@ -46,44 +46,7 @@ int main(void)
                 }
                 else if (op_menu == '3') //////////////////// RESERVAS
                 {
-                    char op_reserva = ' ';
-
-                    while (op_reserva != '0')
-                    {
-                        system("clear||cls");
-                        tela_reservas();
-
-                        printf("\nDigite a opção desejada: ");
-                        op_reserva = getchar();
-                        getchar();
-
-                        if (op_reserva == '1') //////////////////// CRIAR RESERVA
-                        {
-                            criar_reserva();
-                            press_qualquer_tecla();
-                        }
-                        else if (op_reserva == '2') //////////////////// FINALIZAR RESERVA
-                        {
-                            finalizar_reserva();
-                            press_qualquer_tecla();
-                        }
-                        else if (op_reserva == '3') //////////////////// LISTAR RESERVAS
-                        {
-                            listar_reserva();
-                            press_qualquer_tecla();
-                        }
-                        else if (op_reserva == '0') //////////////////// VOLTAR
-                        {
-                            printf("\nSaindo do sistema...\n");
-                            press_qualquer_tecla();
-                        }
-                        else
-                        {
-                            printf("\nOpção inválida! Tente novamente.\n");
-                            printf("Pressione Enter para continuar...");
-                            getchar();
-                        }
-                    }
+                    navegacao_reserva();
                 }
                 else if (op_menu == '4') //////////////////// RELATÓRIOS
                 {

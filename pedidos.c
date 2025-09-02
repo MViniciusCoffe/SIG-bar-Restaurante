@@ -36,6 +36,7 @@ void adicionar_itens(void)
     scanf("%s", num_prato);
 
     printf("\nitem adicionado com sucesso!\n");
+    limpar_buffer_teclas();
 }
 
 void remover_itens(void)
@@ -52,6 +53,7 @@ void remover_itens(void)
     scanf("%s", num_prato);
 
     printf("\nItem removido com sucesso!\n");
+    limpar_buffer_teclas();
 }
 
 void finalizar_pedido(void)
@@ -71,6 +73,8 @@ void finalizar_pedido(void)
     {
         printf("\nPedido não finalizado!");
     }
+
+    limpar_buffer_teclas();
 }
 
 void navegacao_pedidos(void)
