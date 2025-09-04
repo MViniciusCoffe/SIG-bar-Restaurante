@@ -116,7 +116,9 @@ void tela_cardapio(void)
         }
         else if (op == '0')
         {
-            // Volta a gestao
+            printf("\n>>> Voltando ao menu!\n");
+            printf("\nPressione <ENTER> para continuar\n");
+            getchar();
         }
         else
         {
