@@ -107,8 +107,8 @@ void navegacao_pedidos(void)
         }
         else if (op_pedidos == '0') //////////////////// VOLTAR PARA TELA PEDIDOS
         {
-            printf("\n>>> Retornando ao menu anterior...\n");
-            printf("\nPressione qualquer tecla para continuar...\n");
+            printf("\n>>> Voltando ao menu!\n");
+            printf("\nPressione qualquer tecla para continuar\n");
             press_qualquer_tecla();
         }
         else

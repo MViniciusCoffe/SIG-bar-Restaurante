@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h> // Necessário para system()
-
 #include "reservas.h"
 
 void tela_reservas(void)
@@ -107,14 +104,15 @@ void navegacao_reserva(void)
         }
         else if (op_reserva == '0') //////////////////// VOLTAR
         {
-            printf("\nSaindo do sistema...\n");
+            printf("\n>>> Voltando ao menu!\n");
+            printf("\nPressione qualquer tecla para continuar\n");
             press_qualquer_tecla();
         }
         else
         {
             printf("\nOpção inválida! Tente novamente.\n");
-            printf("Pressione Enter para continuar...");
-            getchar();
+            printf("Pressione qualquer tecla para continuar...");
+            press_qualquer_tecla();
         }
     }
 }

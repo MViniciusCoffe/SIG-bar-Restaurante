@@ -44,92 +44,6 @@ void tela_menu_principal(void)
     printf("╚════════════════════════════════════════════════════════════════════════╝\n");
 }
 
-void tela_cardapio(void)
-{
-    char op = ' ';
-
-    while (op != '0')
-    {
-        system("clear||cls");
-        printf("\n");
-        printf("╔══════════════════════════════════════════════════════════════════════════╗\n");
-        printf("║    ░██████╗██╗░██████╗░  ██████╗░░█████╗░██████╗░                        ║\n");
-        printf("║    ██╔════╝██║██╔════╝░  ██╔══██╗██╔══██╗██╔══██╗                        ║\n");
-        printf("║    ╚█████╗░██║██║░░██╗░  ██████╦╝███████║██████╔╝                        ║\n");
-        printf("║    ░╚═══██╗██║██║░░╚██╗  ██╔══██╗██╔══██║██╔══██╗                        ║\n");
-        printf("║    ██████╔╝██║╚██████╔╝  ██████╦╝██║░░██║██║░░██║                        ║\n");
-        printf("║    ╚═════╝░╚═╝░╚═════╝░  ╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝                        ║\n");
-        printf("╠══════════════════════════════════════════════════════════════════════════╣\n");
-        printf("║                             >>> CARDÁPIO <<<                             ║\n");
-        printf("║                                                                          ║\n");
-        printf("║   1. Pratos                                                              ║\n");
-        printf("║   2. Bebidas                                                             ║\n");
-        printf("║   3. Sobremesas                                                          ║\n");
-        printf("║   0. Voltar ao menu anterior                                             ║\n");
-        printf("║                                                                          ║\n");
-        printf("╚══════════════════════════════════════════════════════════════════════════╝\n");
-        printf("\nDigite a opção desejada: ");
-        op = getchar();
-        getchar(); // limpa o enter
-
-        if (op == '1')
-        {
-            system("clear||cls");
-            printf("\n");
-            printf("╔══════════════════════════════════════════════════════════════════════╗\n");
-            printf("║                             >>> PRATOS <<<                           ║\n");
-            printf("╠══════════════════════════════════════════════════════════════════════╣\n");
-            printf("║  1. Prato Executivo......................... R$ 25,00                ║\n");
-            printf("║  2. Lasanha de Frango....................... R$ 28,00                ║\n");
-            printf("║  3. Feijoada Completa....................... R$ 30,00                ║\n");
-            printf("╚══════════════════════════════════════════════════════════════════════╝\n");
-            printf("\nPressione <ENTER> para voltar...\n");
-            getchar();
-        }
-        else if (op == '2')
-        {
-            system("clear||cls");
-            printf("\n");
-            printf("╔══════════════════════════════════════════════════════════════════════╗\n");
-            printf("║                            >>> BEBIDAS <<<                           ║\n");
-            printf("╠══════════════════════════════════════════════════════════════════════╣\n");
-            printf("║  1. Refrigerante Lata...................... R$ 5,00                  ║\n");
-            printf("║  2. Água Mineral........................... R$ 3,00                  ║\n");
-            printf("║  3. Suco Natural........................... R$ 7,00                  ║\n");
-            printf("╚══════════════════════════════════════════════════════════════════════╝\n");
-            printf("\nPressione <ENTER> para voltar...\n");
-            getchar();
-        }
-        else if (op == '3')
-        {
-            system("clear||cls");
-            printf("\n");
-            printf("╔══════════════════════════════════════════════════════════════════════╗\n");
-            printf("║                           >>> SOBREMESAS <<<                         ║\n");
-            printf("╠══════════════════════════════════════════════════════════════════════╣\n");
-            printf("║  1. Pudim de Leite......................... R$ 10,00                 ║\n");
-            printf("║  2. Mousse de Maracujá..................... R$ 9,00                  ║\n");
-            printf("║  3. Brownie com Sorvete.................... R$ 12,00                 ║\n");
-            printf("╚══════════════════════════════════════════════════════════════════════╝\n");
-            printf("\nPressione <ENTER> para voltar...\n");
-            getchar();
-        }
-        else if (op == '0')
-        {
-            printf("\n>>> Voltando ao menu!\n");
-            printf("\nPressione <ENTER> para continuar\n");
-            getchar();
-        }
-        else
-        {
-            printf("\n>>> Opção inválida! Tente novamente.\n");
-            printf("\nPressione <ENTER> para continuar...\n");
-            getchar();
-        }
-    }
-}
-
-
 void tela_relatorios(void)
 {
     char op = ' ';
@@ -189,7 +103,9 @@ void tela_relatorios(void)
         }
         else if (op == '0')
         {
-            printf("\n>>> Retornando ao menu anterior...\n");
+            printf("\n>>> Voltando ao menu!\n");
+            printf("\nPressione qualquer tecla para continuar\n");
+            press_qualquer_tecla();
         }
         else
         {

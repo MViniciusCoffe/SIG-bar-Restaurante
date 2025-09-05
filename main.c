@@ -4,6 +4,7 @@
 #include "pedidos.c"
 #include "pause.c"
 #include "reservas.c"
+#include "cardapio.c"
 
 void relatorio_do_dia(void);
 void relatorio_do_mes(void);
@@ -41,8 +42,7 @@ int main(void)
                 }
                 else if (op_menu == '2') //////////////////// CARDÁPIO
                 {
-                    tela_cardapio();
-                    press_qualquer_tecla();
+                    navegacao_cardapio();
                 }
                 else if (op_menu == '3') //////////////////// RESERVAS
                 {
