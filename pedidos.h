@@ -9,4 +9,7 @@ void adicionar_itens(void);
 void remover_itens(void);
 void finalizar_pedido(void);
 
+// Navegação
+void navegacao_pedidos(void);
+
 #endif

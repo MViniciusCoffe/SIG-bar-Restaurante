@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "pedidos.h"
+#include "relatorios.h"
 #include "pause.h"
 
-void tela_pedidos(void)
+void tela_relatorios(void)
 {
     printf("\n");
     printf("╔═══════════════════════════════════════════════════════════════════════╗\n");
@@ -14,101 +14,75 @@ void tela_pedidos(void)
     printf("║    ██████╔╝██║╚██████╔╝  ██████╦╝██║░░██║██║░░██║                     ║\n");
     printf("║    ╚═════╝░╚═╝░╚═════╝░  ╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝                     ║\n");
     printf("╠═══════════════════════════════════════════════════════════════════════╣\n");
-    printf("║                          >>> PEDIDOS <<<                              ║\n");
+    printf("║                        >>> RELATÓRIOS <<<                             ║\n");
     printf("║                                                                       ║\n");
-    printf("║   1. Adicionar itens ao pedido                                        ║\n");
-    printf("║   2. Remover itens do pedido                                          ║\n");
-    printf("║   3. Finalizar pedido                                                 ║\n");
-    printf("║   0. Voltar ao menu anterior                                          ║\n");
+    printf("║     1. Relatorio do dia                                               ║\n");
+    printf("║     2. Relatorio do mensal                                            ║\n");
+    printf("║     3. Relatorio anual                                                ║\n");
+    printf("║     0. Voltar ao menu principal                                       ║\n");
     printf("║                                                                       ║\n");
     printf("╚═══════════════════════════════════════════════════════════════════════╝\n");
 }
 
-void adicionar_itens(void)
+void relatorio_vendas(void)
 {
-    char num_mesa[10];
-    char num_prato[10];
-
     system("clear||cls");
-    printf("\n>>> Adicionar itens.\n");
-
-    printf("Digite o número da mesa: ");
-    scanf("%s", num_mesa);
-
-    printf("Digite o número do prato: ");
-    scanf("%s", num_prato);
-
-    printf("\nitem adicionado com sucesso!\n");
-    limpar_buffer_teclas();
+    printf("\n>>> RELATÓRIO DE VENDAS DO DIA <<<\n\n");
+    printf("- Total de vendas: R$ 1.250,00\n");
+    printf("- Total de pedidos: 45\n");
+    printf("- Média por pedido: R$ 27,78\n");
+    printf("\nPressione qualquer tecla para continuar...\n");
 }
 
-void remover_itens(void)
+void relatorio_mais_vendidos(void)
 {
-    char num_mesa[10];
-    char num_prato[10];
     system("clear||cls");
-    printf("\n>>> Remover itens.\n");
-
-    printf("\nDigite o número da mesa: ");
-    scanf("%s", num_mesa);
-
-    printf("\nDigite o número do prato: ");
-    scanf("%s", num_prato);
-
-    printf("\nItem removido com sucesso!\n");
-    limpar_buffer_teclas();
+    printf("\n>>> RELATÓRIO DE ITENS MAIS VENDIDOS <<<\n\n");
+    printf("1. Prato Executivo .......... 15 unidades\n");
+    printf("2. Refrigerante Lata ........ 12 unidades\n");
+    printf("3. Brownie com Sorvete ...... 9 unidades\n");
+    printf("\nPressione qualquer tecla para continuar...\n");
 }
 
-void finalizar_pedido(void)
+void relatorio_reservas(void)
 {
-    char confirmacao[2];
     system("clear||cls");
-    printf("\n>>> Finalizar pedido\n");
-
-    printf("Deseja finalizar o pedido? S/N: ");
-    scanf("%s", confirmacao);
-
-    if (confirmacao[0] == 'S' || confirmacao[0] == 's')
-    {
-        printf("\nPedido finalizado com sucesso!\n");
-    }
-    else
-    {
-        printf("\nPedido não finalizado!");
-    }
-
-    limpar_buffer_teclas();
+    printf("\n>>> RELATÓRIO DE RESERVAS <<<\n\n");
+    printf("- Total de reservas hoje: 12\n");
+    printf("- Mesas ocupadas: 8\n");
+    printf("- Mesas disponíveis: 4\n");
+    printf("\nPressione qualquer tecla para continuar...\n");
 }
 
-void navegacao_pedidos(void)
+void navegacao_relatorios(void)
 {
-    char op_pedidos = ' ';
+    char op = ' ';
 
-    while (op_pedidos != '0')
+    while (op != '0')
     {
         system("clear||cls");
-        tela_pedidos();
+        tela_relatorios();
 
         printf("\nDigite a opção desejada: ");
-        op_pedidos = getchar();
+        op = getchar();
         getchar();
 
-        if (op_pedidos == '1') //////////////////// ADICIONAR ITENS
+        if (op == '1') //////////////////// RELATORIO VENDAS
         {
-            adicionar_itens();
+            relatorio_vendas();
             press_qualquer_tecla();
         }
-        else if (op_pedidos == '2') //////////////////// REMOVER ITENS
+        else if (op == '2') //////////////////// RELATORIO MAIS VENDIDOS
         {
-            remover_itens();
+            relatorio_mais_vendidos();
             press_qualquer_tecla();
         }
-        else if (op_pedidos == '3') //////////////////// FINALIZAR PEDIDOS
+        else if (op == '3') //////////////////// RELATORIO RESERVAS
         {
-            finalizar_pedido();
+            relatorio_reservas();
             press_qualquer_tecla();
         }
-        else if (op_pedidos == '0') //////////////////// VOLTAR PARA TELA PEDIDOS
+        else if (op == '0') //////////////////// VOLTAR AO MENU
         {
             printf("\n>>> Voltando ao menu!\n");
             printf("\nPressione qualquer tecla para continuar\n");
@@ -117,6 +91,7 @@ void navegacao_pedidos(void)
         else
         {
             printf("\n>>> Opção inválida! Tente novamente.\n");
+            printf("\nPressione qualquer tecla para continuar...\n");
             press_qualquer_tecla();
         }
     }

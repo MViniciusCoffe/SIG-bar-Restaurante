@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "pause.h"
 
 // Bloco condicional de compilação (Só compila no windows)
@@ -18,9 +19,6 @@ void press_qualquer_tecla(void)
 #include <unistd.h>
 void press_qualquer_tecla(void)
 {
-    // Limpa o buffer do scanf
-    limpar_buffer_teclas();
-    
     // oldt guardará a configuração atual do terminal, para restaurar depois;
     // newt será a configuração temporária que desativa o “precisar apertar ENTER”.
     struct termios oldt, newt;

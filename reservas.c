@@ -1,11 +1,10 @@
 #include <stdio.h>
-#include <stdlib.h>  // Necessário para system()
-
+#include <stdlib.h>
 #include "reservas.h"
+#include "pause.h"
 
 void tela_reservas(void)
 {
-    system("clear||cls");
     printf("\n");
     printf("╔═════════════════════════════════════════════════════════════════════╗\n");
     printf("║    ░██████╗██╗░██████╗░  ██████╗░░█████╗░██████╗░                   ║\n");
@@ -18,7 +17,7 @@ void tela_reservas(void)
     printf("║                        >>> RESERVAS <<<                             ║\n");
     printf("║                                                                     ║\n");
     printf("║   1. Criar reserva                                                  ║\n");
-    printf("║   2. Cancelar reserva                                               ║\n");
+    printf("║   2. Finalizar reserva                                              ║\n");
     printf("║   3. Listar reservas                                                ║\n");
     printf("║   0. Voltar ao menu anterior                                        ║\n");
     printf("║                                                                     ║\n");
@@ -48,8 +47,8 @@ void criar_reserva(void)
     scanf("%d", &mesa);
 
     printf("\nReserva criada com sucesso!\n");
+    limpar_buffer_teclas();
 }
-
 
 void listar_reserva(void)
 {
@@ -59,8 +58,8 @@ void listar_reserva(void)
     // Exemplo (substituir por leitura real de dados depois)
     printf("1. João - 10/09/2025 - 19:00 - Mesa 5\n");
     printf("2. Maria - 10/09/2025 - 20:00 - Mesa 3\n");
+    limpar_buffer_teclas();
 }
-
 
 void finalizar_reserva(void)
 {
@@ -74,4 +73,48 @@ void finalizar_reserva(void)
 
     printf("\nReserva cancelada com sucesso!\n");
     // buscar e remover a reserva em uma estrutura real
+    limpar_buffer_teclas();
+}
+
+void navegacao_reserva(void)
+{
+    char op_reserva = ' ';
+
+    while (op_reserva != '0')
+    {
+        system("clear||cls");
+        tela_reservas();
+
+        printf("\nDigite a opção desejada: ");
+        op_reserva = getchar();
+        getchar();
+
+        if (op_reserva == '1') //////////////////// CRIAR RESERVA
+        {
+            criar_reserva();
+            press_qualquer_tecla();
+        }
+        else if (op_reserva == '2') //////////////////// FINALIZAR RESERVA
+        {
+            finalizar_reserva();
+            press_qualquer_tecla();
+        }
+        else if (op_reserva == '3') //////////////////// LISTAR RESERVAS
+        {
+            listar_reserva();
+            press_qualquer_tecla();
+        }
+        else if (op_reserva == '0') //////////////////// VOLTAR
+        {
+            printf("\n>>> Voltando ao menu!\n");
+            printf("\nPressione qualquer tecla para continuar\n");
+            press_qualquer_tecla();
+        }
+        else
+        {
+            printf("\nOpção inválida! Tente novamente.\n");
+            printf("Pressione qualquer tecla para continuar...");
+            press_qualquer_tecla();
+        }
+    }
 }
