@@ -16,8 +16,61 @@ Contém os módulos principais do sistema, como:
 4. Finalização:
     - Tela de finalização do sistema, com opções para sair ou reiniciar.
 
+## como rodar 
+
+### Pré-requisitos
+
+Antes de começar, você precisa ter instalado no seu computador:
+
+1. **Visual Studio Code (VS Code)** – [Download aqui](https://code.visualstudio.com/)
+2. **GCC (compilador C)** – parte do pacote **MinGW** (no Windows) ou já vem instalado no Linux/Mac.
+3. **Extensão "C/C++" da Microsoft no VS Code** – instale pela aba de extensões (`Ctrl+Shift+X` no VS Code).
+
+
+### Passo a Passo para Compilar e Rodar
+
+1. Abra o VS Code
+Abra a pasta onde está o arquivo `sig_bar`.
+
+2. Abra o Terminal no VS Code
+Vá em **Terminal > Novo Terminal**
+Ou pressione: `Ctrl + '` (crase)
+
+3. Compile o programa
+
+No terminal, digite o seguinte comando:
+
+```
+gcc main.c cardapio.c pedidos.c pause.c relatorios.c reservas.c telas.c -o sig_bar
+```
+
+Esse comando usa o `gcc` para compilar e gerar um executável chamado `sig_bar`.
+
+4. Execute o programa
+
+##### Se estiver no **Windows**, digite:
+
+```bash
+./sig_bar.exe
+```
+
+##### Se estiver no **Linux ou Mac**, digite:
+
+```bash
+./sig_bar
+```
+
+### Problemas comuns
+
+| Problema                              | Solução                                                                                  |
+| -----------------------------------   | ---------------------------------------------------------------------------------------- |
+| `'gcc' não é reconhecido`             | O GCC não está instalado ou a variável de ambiente não foi configurada. Instale o MinGW. |
+| `Permissão negada ao rodar ./sig_bar` | No Linux/Mac, talvez precise dar permissão: `chmod +x sig_bar`                           |
+| Saída está errada                     | Verifique se o código foi salvo (`Ctrl+S`) antes de compilar.                            |
+
+
 ## To do
 1. Mudança na lógica de realização de pedidos
 2. Modularizar mais
 3. Simplificar interface
-4. Adicionar `Como Rodar`
+
