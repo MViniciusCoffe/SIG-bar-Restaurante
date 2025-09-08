@@ -1,8 +1,10 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "reservas.h"
+#include "pause.h"
 
 void tela_reservas(void)
 {
-    system("clear||cls");
     printf("\n");
     printf("╔═════════════════════════════════════════════════════════════════════╗\n");
     printf("║    ░██████╗██╗░██████╗░  ██████╗░░█████╗░██████╗░                   ║\n");

@@ -1,4 +1,7 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "pedidos.h"
+#include "pause.h"
 
 void tela_pedidos(void)
 {

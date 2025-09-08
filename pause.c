@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "pause.h"
 
 // Bloco condicional de compilação (Só compila no windows)
