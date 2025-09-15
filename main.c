@@ -6,6 +6,7 @@
 #include "reservas.h"
 #include "cardapio.h"
 #include "relatorios.h"
+#include "clientes.h"
 
 int main(void)
 {
@@ -48,6 +49,10 @@ int main(void)
                 else if (op_menu == '4') //////////////////// RELATÓRIOS
                 {
                     navegacao_relatorios();
+                }
+                else if (op_menu == '5') //////////////////// CLIENTES
+                {
+                    navegacao_clientes();
                 }
                 else if (op_menu == '0') //////////////////// VOLTAR
                 {
