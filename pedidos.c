@@ -26,6 +26,7 @@ void tela_pedidos(void)
 
 void adicionar_itens(void)
 {
+    // Associar Itens a Mesa
     char num_mesa[10];
     char num_prato[10];
 
@@ -108,7 +109,7 @@ void navegacao_pedidos(void)
             finalizar_pedido();
             press_qualquer_tecla();
         }
-        else if (op_pedidos == '0') //////////////////// VOLTAR PARA TELA PEDIDOS
+        else if (op_pedidos == '0') //////////////////// VOLTAR PARA TELA DE MENU
         {
             printf("\n>>> Voltando ao menu!\n");
             printf("\nPressione qualquer tecla para continuar\n");

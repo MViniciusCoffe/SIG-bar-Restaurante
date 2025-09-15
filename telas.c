@@ -41,6 +41,7 @@ void tela_menu_principal(void)
     printf("║   2. Cardápio     - Visualizar cardápio                                ║\n");
     printf("║   3. Reservas     - Gerenciar reservas                                 ║\n");
     printf("║   4. Relatórios   - Gerar relatórios de vendas                         ║\n");
+    printf("║   5. Clientes     - Gerenciar Clientes                                 ║\n");
     printf("║   0. Voltar para tela de gestão                                        ║\n");
     printf("║                                                                        ║\n");
     printf("╚════════════════════════════════════════════════════════════════════════╝\n");
@@ -112,4 +113,25 @@ void tela_finalizacao(void)
     printf("║         Obrigado por utilizar o SIG-BAR. Até a próxima!               ║\n");
     printf("║                                                                       ║\n");
     printf("╚═══════════════════════════════════════════════════════════════════════╝\n");
+}
+
+void tela_clintes(void)
+{
+    printf("\n");
+    printf("╔══════════════════════════════════════════════════════════════════════════╗\n");
+    printf("║    ░██████╗██╗░██████╗░  ██████╗░░█████╗░██████╗░                        ║\n");
+    printf("║    ██╔════╝██║██╔════╝░  ██╔══██╗██╔══██╗██╔══██╗                        ║\n");
+    printf("║    ╚█████╗░██║██║░░██╗░  ██████╦╝███████║██████╔╝                        ║\n");
+    printf("║    ░╚═══██╗██║██║░░╚██╗  ██╔══██╗██╔══██║██╔══██╗                        ║\n");
+    printf("║    ██████╔╝██║╚██████╔╝  ██████╦╝██║░░██║██║░░██║                        ║\n");
+    printf("║    ╚═════╝░╚═╝░╚═════╝░  ╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝                        ║\n");
+    printf("╠══════════════════════════════════════════════════════════════════════════╣\n");
+    printf("║                             >>> CLIENTES <<<                             ║\n");
+    printf("║                                                                          ║\n");
+    printf("║   1. Listar clientes                                                     ║\n");
+    printf("║   2. cadastrar clientes                                                  ║\n");
+    printf("║   3. remover clinetes                                                    ║\n");
+    printf("║   0. Voltar ao menu anterior                                             ║\n");
+    printf("║                                                                          ║\n");
+    printf("╚══════════════════════════════════════════════════════════════════════════╝\n");
 }
