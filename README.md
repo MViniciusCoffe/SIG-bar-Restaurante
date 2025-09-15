@@ -8,7 +8,8 @@ Contém os módulos principais do sistema, como:
     - 1.1 Pedidos Tela para criação e gerenciamento de pedidos, incluindo opções para adicionar itens, remover itens e finalizar pedidos.
     - 1.2 Cardápio: Tela para visualização e gerenciamento do cardápio, incluindo opções para adicionar, editar e remover itens do cardápio.
     - 1.3 Reserva: Tela para gerenciamento de reservas, incluindo opções para adicionar, editar e cancelar reservas.
-    - 1.4 Relatórios: Tela para geração de relatórios, como vendas diárias, mensais e anuais.
+    - 1.4 clientes: Tela para gerenciar os clientes, incluindo listar, cadastrar ou remover 
+    - 1.5 Relatórios: Tela para geração de relatórios, como vendas diárias, mensais e anuais.
 2. Sobre:
     - Informações sobre o sistema, como versão, desenvolvedores e contato.
 3. Equipe:
@@ -41,7 +42,7 @@ Ou pressione: `Ctrl + '` (crase)
 No terminal, digite o seguinte comando:
 
 ```
-gcc main.c cardapio.c pedidos.c pause.c relatorios.c reservas.c telas.c -o sig_bar
+gcc main.c cardapio.c pedidos.c pause.c relatorios.c reservas.c telas.c clientes.c -o sig_bar
 ```
 
 Esse comando usa o `gcc` para compilar e gerar um executável chamado `sig_bar`.
@@ -73,4 +74,6 @@ Esse comando usa o `gcc` para compilar e gerar um executável chamado `sig_bar`.
 1. Mudança na lógica de realização de pedidos
 2. Modularizar mais
 3. Simplificar interface
+4. Identificação do Garçon
+5. Calculo dos preços do cardápio
 
