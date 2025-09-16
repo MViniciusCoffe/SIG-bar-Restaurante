@@ -88,8 +88,8 @@ void tela_equipe(void)
     printf("║  - MARCUS VINICIUS DE SOUZA AZEVEDO                                   ║\n");
     printf("║   Email: infobasicifrn2017marcusv@gmail.com                           ║\n");
     printf("║                                                                       ║\n");
-    printf("║  -LUÍS FELIPE LINHARES PEREIRA                                        ║\n");
-    printf("║   Email:luis.felipe.linhares.701@ufrn.edu.br                          ║\n");
+    printf("║  - LUÍS FELIPE LINHARES PEREIRA                                       ║\n");
+    printf("║   Email: luis.felipe.linhares.701@ufrn.edu.br                         ║\n");
     printf("║                                                                       ║\n");
     printf("║             Pressione qualquer tecla para voltar...                   ║\n");
     printf("║                                                                       ║\n");
