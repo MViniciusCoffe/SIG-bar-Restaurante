@@ -70,6 +70,15 @@ Esse comando usa o `gcc` para compilar e gerar um executável chamado `sig_bar`.
 | Saída está errada                     | Verifique se o código foi salvo (`Ctrl+S`) antes de compilar.                            |
 
 
+### Equipe de desenvolvimentp
+
+| Integrante                       | E-mail                                                                              |
+| -------------------------------- | ----------------------------------------------------------------------------------- |
+| Marcus Vinicius de Souza Azevedo | [infobasicifrn2017marcusv@gmail.com](mailto:infobasicifrn2017marcusv@gmail.com)     |
+| Luis Felipe Linhares Pereira     | [luis.felipe.linhares.701@ufrn.edu.br](mailto:luis.felipe.linhares.701@ufrn.edu.br) |
+
+
+
 ## To do
 1. Mudança na lógica de realização de pedidos
 2. Modularizar mais
