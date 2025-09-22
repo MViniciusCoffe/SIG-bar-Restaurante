@@ -83,6 +83,5 @@ Esse comando usa o `gcc` para compilar e gerar um executável chamado `sig_bar`.
 1. Mudança na lógica de realização de pedidos
 2. Modularizar mais
 3. Simplificar interface
-4. Identificação do Garçon
-5. Calculo dos preços do cardápio
+4. Calculo dos preços do cardápio
 
